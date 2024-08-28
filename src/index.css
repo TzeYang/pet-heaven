@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading {
+    @apply text-[44px] font-bold leading-[49px] text-left;
+  }
+
+  .section-title {
+    @apply text-[38px] font-bold leading-[42px];
+  }
+
+  .container {
+    @apply max-w-[1240px] mx-auto px-[3%];
+  }
+
+  .btn-primary {
+    @apply px-[20px] py-[11px] rounded-[70px] text-[15px] font-bold bg-primary text-white w-fit transition-all hover:scale-105 whitespace-nowrap relative;
+  }
+
+  .btn-secondary {
+    @apply border border-primary text-[15px] font-bold text-white rounded-full px-[20px] py-[11px]  whitespace-nowrap hover:bg-primary/20 hover:scale-105 transition-all;
+  }
+}
+
+@layer base {
+  p,
+  li {
+    @apply text-[17px] font-normal leading-[26px] text-[#717171];
+  }
+
+  a {
+    @apply hover:underline transition-all;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0px 4px 36px 20px #00000014;
+}
+
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+nav ul {
+  background-color: #333;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0.5rem;
+}
+
+.showlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .showlist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .showlist {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0.3rem;
+  }
+}
